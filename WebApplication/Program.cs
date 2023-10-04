@@ -1,7 +1,8 @@
 using System.Data.SqlTypes;
 using Microsoft.VisualBasic;
+using WebApp = Microsoft.AspNetCore.Builder.WebApplication ;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApp.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<DatabaseContext>();
