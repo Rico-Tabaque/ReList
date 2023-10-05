@@ -8,6 +8,6 @@ public class User
     public string Gender { get; set; }
     public DateTime Birthdate { get; set; }
 
-    public ICollection<Todo> Todos { get; }
+    public ICollection<Todo>? Todos { get; }
 
 }
