@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 public class DatabaseContext : DbContext
 {
     public DbSet<User>? Users { get; set; }
+    public DbSet<Todo>? Todos { get; set; }
     private readonly IConfiguration Configuration;
     public DatabaseContext(IConfiguration configuration)
     {
