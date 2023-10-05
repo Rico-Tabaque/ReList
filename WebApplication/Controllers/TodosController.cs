@@ -10,55 +10,55 @@ namespace WebApplication.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class TodosController : ControllerBase
     {
         private readonly DatabaseContext _context;
 
-        public UsersController(DatabaseContext context)
+        public TodosController(DatabaseContext context)
         {
             _context = context;
         }
 
-        // GET: api/Users
+        // GET: api/Todos
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<Todo>>> GetTodos()
         {
-          if (_context.Users == null)
+          if (_context.Todos == null)
           {
               return NotFound();
           }
-            return await _context.Users.ToListAsync();
+            return await _context.Todos.ToListAsync();
         }
 
-        // GET: api/Users/5
+        // GET: api/Todos/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
+        public async Task<ActionResult<Todo>> GetTodo(int id)
         {
-          if (_context.Users == null)
+          if (_context.Todos == null)
           {
               return NotFound();
           }
-            var user = await _context.Users.FindAsync(id);
+            var todo = await _context.Todos.FindAsync(id);
 
-            if (user == null)
+            if (todo == null)
             {
                 return NotFound();
             }
 
-            return user;
+            return todo;
         }
 
-        // PUT: api/Users/5
+        // PUT: api/Todos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, User user)
+        public async Task<IActionResult> PutTodo(int id, Todo todo)
         {
-            if (id != user.Id)
+            if (id != todo.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(user).State = EntityState.Modified;
+            _context.Entry(todo).State = EntityState.Modified;
 
             try
             {
@@ -66,7 +66,7 @@ namespace WebApplication.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserExists(id))
+                if (!TodoExists(id))
                 {
                     return NotFound();
                 }
@@ -79,44 +79,44 @@ namespace WebApplication.Controllers
             return NoContent();
         }
 
-        // POST: api/Users
+        // POST: api/Todos
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<User>> PostUser(User user)
+        public async Task<ActionResult<Todo>> PostTodo(Todo todo)
         {
-          if (_context.Users == null)
+          if (_context.Todos == null)
           {
-              return Problem("Entity set 'DatabaseContext.Users'  is null.");
+              return Problem("Entity set 'DatabaseContext.Todos'  is null.");
           }
-            _context.Users.Add(user);
+            _context.Todos.Add(todo);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.Id }, user);
+            return CreatedAtAction("GetTodo", new { id = todo.Id }, todo);
         }
 
-        // DELETE: api/Users/5
+        // DELETE: api/Todos/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(int id)
+        public async Task<IActionResult> DeleteTodo(int id)
         {
-            if (_context.Users == null)
+            if (_context.Todos == null)
             {
                 return NotFound();
             }
-            var user = await _context.Users.FindAsync(id);
-            if (user == null)
+            var todo = await _context.Todos.FindAsync(id);
+            if (todo == null)
             {
                 return NotFound();
             }
 
-            _context.Users.Remove(user);
+            _context.Todos.Remove(todo);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool UserExists(int id)
+        private bool TodoExists(int id)
         {
-            return (_context.Users?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Todos?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
