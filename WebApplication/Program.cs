@@ -27,22 +27,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapGet("/", () => "Hello World!");
-
-var sampleList = new int[] { 1, 2, 3, 4, 5 };
-
-app.MapGet("/test", () => sampleList);
-app.MapPost("/createTodo", () => sampleList);
-
-
-app.MapPost("/user", (User user, DatabaseContext databaseContext) =>
-{
-    //var newUser = new User() { Id = 1, FamilyName = "Arroyo", GivenName = "Exequiel", Gender = "Male" };
-    
-    databaseContext.Users.Add(user);
-    databaseContext.SaveChanges();
-
-    return Results.Created("/user", user);
-});
-
 app.Run();
