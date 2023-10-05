@@ -27,7 +27,7 @@ namespace WebApplication.Controllers
           {
               return NotFound();
           }
-            return await _context.Users.ToListAsync();
+            return await _context.Users.Include(user => user.Todos).ToListAsync();
         }
 
         // GET: api/Users/5
