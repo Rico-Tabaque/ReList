@@ -12,9 +12,9 @@ namespace WebApplication.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly MySQLContext _context;
+        private readonly DatabaseContext _context;
 
-        public UsersController(MySQLContext context)
+        public UsersController(DatabaseContext context)
         {
             _context = context;
         }

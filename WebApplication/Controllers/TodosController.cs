@@ -8,13 +8,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class TodosController : ControllerBase
     {
-        private readonly MySQLContext _context;
+        private readonly DatabaseContext _context;
 
-        public TodosController(MySQLContext context)
+        public TodosController(DatabaseContext context)
         {
             _context = context;
         }

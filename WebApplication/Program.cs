@@ -5,7 +5,7 @@ using WebApp = Microsoft.AspNetCore.Builder.WebApplication ;
 var builder = WebApp.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<MySQLContext>();
+builder.Services.AddDbContext<DatabaseContext>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

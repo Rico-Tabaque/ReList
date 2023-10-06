@@ -4,14 +4,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Oracle.EntityFrameworkCore.Metadata;
 
 #nullable disable
 
-namespace WebApplication.Migrations.MySQL
+namespace WebApplication.Migrations.Oracle
 {
-    [DbContext(typeof(MySQLContext))]
-    [Migration("20231005135740_AddedModels")]
-    partial class AddedModels
+    [DbContext(typeof(DatabaseContext))]
+    [Migration("20231006052403_sample")]
+    partial class sample
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,27 +20,31 @@ namespace WebApplication.Migrations.MySQL
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.11")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+            OracleModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("Todo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("NUMBER(10)");
+
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("tinyint(1)");
+                        .HasColumnType("NUMBER(1)");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<int>("UserId")
-                        .HasColumnType("int");
+                        .HasColumnType("NUMBER(10)");
 
                     b.HasKey("Id");
 
@@ -52,22 +57,24 @@ namespace WebApplication.Migrations.MySQL
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("NUMBER(10)");
+
+                    OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("Birthdate")
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("TIMESTAMP(7)");
 
                     b.Property<string>("FamilyName")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<string>("Gender")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("NVARCHAR2(2000)");
 
                     b.Property<string>("GivenName")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("NVARCHAR2(2000)");
 
                     b.HasKey("Id");
 
