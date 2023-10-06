@@ -12,9 +12,9 @@ namespace WebApplication.Controllers
     [ApiController]
     public class TodosController : ControllerBase
     {
-        private readonly DatabaseContext _context;
+        private readonly MySQLContext _context;
 
-        public TodosController(DatabaseContext context)
+        public TodosController(MySQLContext context)
         {
             _context = context;
         }
