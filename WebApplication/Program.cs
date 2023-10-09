@@ -1,10 +1,25 @@
 using System.Data.SqlTypes;
 using Microsoft.VisualBasic;
-using WebApp = Microsoft.AspNetCore.Builder.WebApplication ;
+using Microsoft.EntityFrameworkCore;
+using WebApp = Microsoft.AspNetCore.Builder.WebApplication;
 
 var builder = WebApp.CreateBuilder(args);
 
 // Add services to the container.
+// IConfiguration configuration = builder.Configuration;
+// var serverVersion = new MySqlServerVersion(new Version(8, 1, 0));
+// builder.Services.AddDbContext<DatabaseContext>(
+//             (options) =>
+//             {
+//                 if (configuration["DatabaseContext"] == "Oracle")
+//                 {
+//                     options.UseOracle(configuration.GetConnectionString("OracleDatabase"));
+//                 }
+//                 else
+//                 {
+//                     options.UseMySql(configuration.GetConnectionString("MySQLDatabase"), serverVersion);
+//                 }
+//             });
 builder.Services.AddDbContext<DatabaseContext>();
 
 builder.Services.AddControllers();

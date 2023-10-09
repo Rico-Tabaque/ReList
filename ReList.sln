@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "WebApplic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{CB3F243B-5CC0-43D3-914B-2B1BCD5C516D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{9CD41C39-7622-42DE-81F8-3EC528FF49F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySqlMigrations", "MySqlMigrations\MySqlMigrations.csproj", "{7D585438-F9EF-463F-8F40-44284F1353D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OracleMigrations", "OracleMigrations\OracleMigrations.csproj", "{21B4C2D2-299B-44D9-8F0F-EC75366A6448}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,14 @@ Global
 		{9CD41C39-7622-42DE-81F8-3EC528FF49F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CD41C39-7622-42DE-81F8-3EC528FF49F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CD41C39-7622-42DE-81F8-3EC528FF49F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D585438-F9EF-463F-8F40-44284F1353D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D585438-F9EF-463F-8F40-44284F1353D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D585438-F9EF-463F-8F40-44284F1353D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D585438-F9EF-463F-8F40-44284F1353D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21B4C2D2-299B-44D9-8F0F-EC75366A6448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B4C2D2-299B-44D9-8F0F-EC75366A6448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B4C2D2-299B-44D9-8F0F-EC75366A6448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B4C2D2-299B-44D9-8F0F-EC75366A6448}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
