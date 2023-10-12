@@ -4,16 +4,19 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <BaseOutputPath>..\WebApplication\bin\</BaseOutputPath>
+    <!-- <BaseOutputPath>..\WebApplication\bin\</BaseOutputPath> -->
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../webapplication\webapplication.csproj" />
-    <PackageReference Include="microsoft.entityframeworkcore.design" Version="7.0.11">
+    <!-- <ProjectReference Include="../webapplication\webapplication.csproj" /> -->
+    <ProjectReference Include="../core\core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.12">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.extensions.dependencyinjection.abstractions" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
