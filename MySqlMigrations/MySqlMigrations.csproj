@@ -4,11 +4,12 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <BaseOutputPath>..\WebApplication\bin\</BaseOutputPath>
+    <!-- <BaseOutputPath>..\WebApplication\bin\</BaseOutputPath> -->
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../webapplication\webapplication.csproj" />
+    <!-- <ProjectReference Include="../webapplication\webapplication.csproj" /> -->
+    <ProjectReference Include="../core\core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -42,7 +42,7 @@ namespace MySqlMigrations.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Todos");
+                    b.ToTable("Todos", (string)null);
                 });
 
             modelBuilder.Entity("User", b =>
@@ -68,7 +68,7 @@ namespace MySqlMigrations.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("Todo", b =>
