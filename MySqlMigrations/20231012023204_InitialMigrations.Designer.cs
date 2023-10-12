@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace WebApplication.Migrations
+namespace MySqlMigrations.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20231012015242_InitialMigrations")]
+    [Migration("20231012023204_InitialMigrations")]
     partial class InitialMigrations
     {
         /// <inheritdoc />
