@@ -399,3 +399,4 @@ FodyWeavers.xsd
 
 # Custom Ignore files
 appsettings.MultipleProviders.json
+.DS_Store
