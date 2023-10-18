@@ -1,14 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <BaseOutputPath>..\WebApplication\bin\</BaseOutputPath>
+    <!--<BaseOutputPath>..\WebApplication\bin\</BaseOutputPath>-->
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../webapplication\webapplication.csproj" />
+    <!--<ProjectReference Include="../webapplication\webapplication.csproj" />-->
+	<ProjectReference Include="../core\core.csproj" />
     <PackageReference Include="microsoft.entityframeworkcore.design" Version="7.0.11">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
