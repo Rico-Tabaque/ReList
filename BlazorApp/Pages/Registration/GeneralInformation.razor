@@ -1,7 +1,7 @@
 ﻿<div class="flex flex-col gap-5">
 	<div class="flex flex-col gap-2">
 		<h3 class="text-gray-500 text-sm">1. Basic Information</h3>
-		<p>Input your First name and Last name</p>
+		<p>What is your first name and last name?</p>
 		<div class="flex gap-3">
 			<input type="text" placeholder="First name" class="border rounded px-2 py-2" />
 			<input type="text" placeholder="Last name" class="border rounded px-2 py-2" />
@@ -9,8 +9,8 @@
 	</div>
 
 	<div class="flex flex-col gap-2">
-		<h3 class="text-gray-500 text-sm">2. Country</h3>
-		<p>In which country is your company operating?</p>
+		<h3 class="text-gray-500 text-sm">2. Email Address</h3>
+		<p>What is your working email?</p>
 
 		<div class="relative">
 			<select class="block appearance-none border px-2 py-2 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
@@ -23,8 +23,18 @@
 	</div>
 
 	<div class="flex flex-col gap-2">
-		<h3 class="text-gray-500 text-sm">3. Type of Data</h3>
-		<p>Input your First name and Last name</p>
+		<h3 class="text-gray-500 text-sm">3. Upload profile picture</h3>
+		<p>Do you want a personalize profile picture?</p>
+
+		<div class="flex gap-3">
+			<div class="hover:cursor-pointer border-[1px] border-violet-500 bg-violet-100 w-[120px] h-[80px] p-2 rounded grid place-content-center">
+				<p class="text-sm">Generate random photo</p>
+			</div>
+			<div class="hover:border-violet-500 hover:cursor-pointer border-[1px] border-dashed w-[120px] h-[80px] p-2 rounded grid place-content-center">
+				<div>█</div>
+				<p class="text-sm">Upload photo</p>
+			</div>
+		</div>
 	</div>
 </div>
 
