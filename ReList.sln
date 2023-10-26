@@ -15,7 +15,7 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Angular", "Angular\Angular.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpress", "DevExpress\DevExpress.csproj", "{7AE1FA63-43E5-4932-8111-57FF575F4ED4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp", "BlazorApp\BlazorApp.csproj", "{06CA58F9-0E39-49DB-9650-C5F607A1C949}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp", "BlazorApp\BlazorApp.csproj", "{06CA58F9-0E39-49DB-9650-C5F607A1C949}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
