@@ -3,9 +3,17 @@ module.exports = {
     content: ["./**/*.{razor,html}"],
     theme: {
         extend: {
-            "default": ['Consolas', 'system-ui']
+            fontFamily: { "default": ['Consolas', 'system-ui'] },
+            backgroundImage: {
+                "cactus": "url('../images/345689_1695963242507.png')"
+            },
+            backgroundSize: {
+                "size": '20%',
+            }
         },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
 }
 

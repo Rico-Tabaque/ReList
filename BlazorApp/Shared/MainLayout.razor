@@ -1,11 +1,13 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="container font-default">
-	<div>
-		<NavMenu />
+<div class="font-default  bg-center bg-size">
+	<div class="sticky top-0 border backdrop-blur-xl bg-white/30 z-50">
+		<div class="container">
+			<NavMenu />
+		</div>
 	</div>
-
-	@Body
+	<div class="container">
+		@Body
+	</div>
 </div>
 
- 
